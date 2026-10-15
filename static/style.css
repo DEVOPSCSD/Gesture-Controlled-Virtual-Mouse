@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fb;
+    color: #1f2937;
+    min-height: 100vh;
+}
+
+
+/* Header */
+
+.header {
+    background: white;
+    padding: 25px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.header h1 {
+    font-size: 30px;
+    margin-bottom: 7px;
+}
+
+.header p {
+    color: #6b7280;
+    font-size: 15px;
+}
+
+
+/* System Status */
+
+.status-indicator {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+#system-dot {
+    width: 10px;
+    height: 10px;
+    background: #9ca3af;
+    border-radius: 50%;
+}
+
+
+/* Main */
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 35px auto;
+}
+
+
+/* Section Titles */
+
+.section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.section-title h2 {
+    font-size: 22px;
+}
+
+#camera-status {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+
+/* Camera */
+
+.camera-section {
+    background: white;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
+}
+
+.camera-container {
+    width: 100%;
+    height: 450px;
+    background: #111827;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#camera-placeholder {
+    text-align: center;
+    color: white;
+}
+
+.camera-icon {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+#camera-placeholder h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+#camera-placeholder p {
+    color: #cbd5e1;
+}
+
+
+/* Webcam Image */
+
+#video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* Status Cards */
+
+.status-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.status-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+}
+
+.status-card h3 {
+    color: #6b7280;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.status-value {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
+/* Buttons */
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 30px 0;
+}
+
+button {
+    border: none;
+    padding: 13px 35px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.start-button {
+    background: #16a34a;
+    color: white;
+}
+
+.stop-button {
+    background: #dc2626;
+    color: white;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+
+/* Gesture Section */
+
+.gestures {
+    margin-top: 35px;
+}
+
+.gestures h2 {
+    margin-bottom: 18px;
+}
+
+.gesture-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.gesture-card {
+    background: white;
+    padding: 22px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+}
+
+.gesture-icon {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.gesture-card h3 {
+    font-size: 16px;
+    margin-bottom: 7px;
+}
+
+.gesture-card p {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #6b7280;
+    font-size: 13px;
+}
+
+
+/* Responsive */
+
+@media (max-width: 800px) {
+
+    .header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .camera-container {
+        height: 350px;
+    }
+
+    .gesture-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .status-section {
+        grid-template-columns: 1fr;
+    }
+
+    .gesture-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .camera-container {
+        height: 280px;
+    }
+}

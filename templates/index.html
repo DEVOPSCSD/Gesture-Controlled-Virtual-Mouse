@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gesture Controlled Virtual Mouse</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div>
+            <h1>Gesture Controlled Virtual Mouse</h1>
+            <p>Control your computer using hand gestures</p>
+        </div>
+
+        <div class="status-indicator">
+            <span id="system-dot"></span>
+            <span id="system-status">System Offline</span>
+        </div>
+    </header>
+
+
+    <!-- Main Content -->
+    <main class="container">
+
+        <!-- Webcam Section -->
+        <section class="camera-section">
+
+            <div class="section-title">
+                <h2>Webcam</h2>
+                <span id="camera-status">Camera Off</span>
+            </div>
+
+            <div class="camera-container">
+
+                <!-- Webcam will be connected here later -->
+                <div id="camera-placeholder">
+
+                    <div class="camera-icon">📷</div>
+
+                    <h3>Webcam Preview</h3>
+
+                    <p>
+                        Click START to activate gesture control
+                    </p>
+
+                </div>
+
+                <img id="video"
+                     src=""
+                     alt="Webcam Feed"
+                     style="display: none;">
+
+            </div>
+
+        </section>
+
+
+        <!-- Status Section -->
+        <section class="status-section">
+
+            <div class="status-card">
+
+                <h3>Current Gesture</h3>
+
+                <div class="status-value"
+                     id="gesture">
+                    Waiting...
+                </div>
+
+            </div>
+
+
+            <div class="status-card">
+
+                <h3>Mouse Status</h3>
+
+                <div class="status-value"
+                     id="mouse-status">
+                    Stopped
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Control Buttons -->
+        <section class="controls">
+
+            <button id="start-btn" class="start-button">
+                ▶ START
+            </button>
+
+            <button id="stop-btn" class="stop-button">
+                ■ STOP
+            </button>
+
+        </section>
+
+
+        <!-- Gesture Instructions -->
+        <section class="gestures">
+
+            <h2>Gesture Controls</h2>
+
+            <div class="gesture-grid">
+
+                <div class="gesture-card">
+                    <div class="gesture-icon">☝️</div>
+                    <h3>Index Finger</h3>
+                    <p>Move Mouse</p>
+                </div>
+
+                <div class="gesture-card">
+                    <div class="gesture-icon">🤏</div>
+                    <h3>Pinch</h3>
+                    <p>Left Click</p>
+                </div>
+
+                <div class="gesture-card">
+                    <div class="gesture-icon">✌️</div>
+                    <h3>Two Fingers</h3>
+                    <p>Right Click</p>
+                </div>
+
+                <div class="gesture-card">
+                    <div class="gesture-icon">✊</div>
+                    <h3>Fist</h3>
+                    <p>Drag</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>Gesture Controlled Virtual Mouse | Python • OpenCV • MediaPipe</p>
+    </footer>
+
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
